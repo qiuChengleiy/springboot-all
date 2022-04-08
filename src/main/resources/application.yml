@@ -1,6 +1,19 @@
 server:
   port: 8080 # 设置应用端口，默认是8080
+  tomcat:
+    max-threads: 800
+    uri-encoding: UTF-8
+  servlet:
+    context-path: /api
 
 spring:
   application:
     name: app
+
+
+
+app:
+  name: ${spring.name}
+  version: "1.0"
+
+
