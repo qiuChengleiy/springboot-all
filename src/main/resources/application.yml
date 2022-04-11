@@ -13,7 +13,7 @@ spring:
 
 
 app:
-  name: ${spring.name}
+  name: ${spring.application.name}
   version: "1.0"
 
 
