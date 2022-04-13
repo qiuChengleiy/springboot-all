@@ -4,7 +4,6 @@ import com.example.app.config.AppConfig;
 import com.example.app.dto.Post;
 import com.example.app.service.HelloService;
 
-import org.jboss.logging.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -77,7 +76,7 @@ public class HelloController {
         return "Hello World!" + req.getTitle();
     }
 
-    @PostMapping("/post/create")
+    @PostMapping("/post/update")
     public String update(@RequestBody Post req){
         return "Hello World!" + req.getContent();
     }

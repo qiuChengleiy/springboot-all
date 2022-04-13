@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.app.mapper.UserRoleMapper">
+
+    <resultMap id="userRoleMap" type="com.example.app.model.UserRole">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="role_name" property="roleName"/>
+    </resultMap>
+
+    <select id="getRoles" resultMap="userRoleMap">
+        select * from user_role
+    </select>
+
+    <select id="getRole" resultMap="userRoleMap">
+        select * from user_role where id=#{id}
+    </select>
+    
+    <update id="updateRole">
+        update user_role set name = "普通用户123" where id=#{id}
+    </update>
+
+    <insert id="addRole">
+        insert user_role (name) values (#{name})
+    </insert>
+
+</mapper>
