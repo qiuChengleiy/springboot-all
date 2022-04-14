@@ -9,13 +9,36 @@
         <result column="role_name" property="roleName"/>
     </resultMap>
 
+    <sql id="selectRole">
+        <![CDATA[ select * from user_role where id < 2 ]]>
+    </sql>
+
     <select id="getRoles" resultMap="userRoleMap">
-        select * from user_role
+        <include refid="selectRole" />
     </select>
 
+<!--    <select id="getRole" resultMap="userRoleMap">-->
+<!--        select * from user_role-->
+<!--        <where>-->
+<!--            1 = 1-->
+<!--            <if test="id != null and id != 0">-->
+<!--                AND  id=#{id}-->
+<!--            </if>-->
+<!--        </where>-->
+<!--    </select>-->
+
     <select id="getRole" resultMap="userRoleMap">
-        select * from user_role where id=#{id}
+        select * from user_role
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="id != null and id != 0">
+                id=#{id}
+            </if>
+        </trim>
     </select>
+
+<!--    <select id="getRole" resultMap="userRoleMap">-->
+<!--        select * from user_role where id=#{id}-->
+<!--    </select>-->
     
     <update id="updateRole">
         update user_role set name = "普通用户123" where id=#{id}
