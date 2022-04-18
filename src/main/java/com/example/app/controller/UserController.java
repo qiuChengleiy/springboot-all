@@ -1,5 +1,6 @@
 package com.example.app.controller;
 
+import com.example.app.common.CommonPage;
 import com.example.app.mapper.UserRoleMapper;
 import com.example.app.model.UserRole;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +23,10 @@ public class UserController {
 
     @GetMapping("role/list")
     @ResponseBody
-    public List<UserRole> getUserRole() {
-        return userRoleMapper.getRoles();
+    public CommonPage<UserRole> getUserRole() {
+        CommonPage.setPageHelper(1, 10);
+        List<UserRole> list = userRoleMapper.getRoles();
+        return  CommonPage.restPage(list);
     }
 
     @GetMapping("role")

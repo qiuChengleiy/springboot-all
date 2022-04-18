@@ -1,5 +1,5 @@
 server:
-  port: 8080 # 设置应用端口，默认是8080
+  port: 8877 # 设置应用端口，默认是8080
   tomcat:
     max-threads: 800
     uri-encoding: UTF-8
