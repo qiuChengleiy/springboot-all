@@ -1,12 +1,10 @@
 # springboot-all
 
-#### 介绍
+## 介绍
 springboot从入门到进阶源码 欢迎star ⭐️
 
 
-## 给个关注呗
-
-## 教程汇总
+## 配套文章
 
 - [我的博客](https://www.qiuchenglei.top)
 
@@ -21,3 +19,7 @@ springboot从入门到进阶源码 欢迎star ⭐️
 - [Springboot基础（四）](https://mp.weixin.qq.com/s/NADDy2WpaHkb17ypsSu9SA)
 
 - [Springboot基础（五）](https://mp.weixin.qq.com/s/dfcPjDzbi57aDWyNZCehJw)
+
+- [SpringBoot进阶之缓存中间件Redis](https://mp.weixin.qq.com/s/ElCAiPiDmwBJXO_T7zE8_A)
+
+- [SpringBoot进阶之MyBatis分页插件](https://mp.weixin.qq.com/s/6OSmftWHa7anfWtClHNG_w)
