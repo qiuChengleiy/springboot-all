@@ -4,6 +4,8 @@ import com.example.app.config.AppConfig;
 import com.example.app.dto.Post;
 import com.example.app.service.HelloService;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -20,6 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 @RequestMapping("/v1")
 public class HelloController {
+    private static final Logger logger = LoggerFactory.getLogger(HelloController.class);
 
     @Value("${app.name}")
     private String name;
@@ -36,6 +39,7 @@ public class HelloController {
 
     @RequestMapping("/hello")
     public String hello(){
+        logger.info("hello");
         return "Hello World!" + name + version;
     }
 
