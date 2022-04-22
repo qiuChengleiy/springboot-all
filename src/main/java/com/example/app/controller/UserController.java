@@ -4,6 +4,7 @@ import com.example.app.common.CommonPage;
 import com.example.app.mapper.UserRoleMapper;
 import com.example.app.model.UserRole;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -52,6 +53,19 @@ public class UserController {
             return "fail";
         }
 
+        return "success";
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @GetMapping("trans")
+    @ResponseBody
+    public String transUser(@RequestParam String name) throws Exception {
+        userRoleMapper.addRole(name);
+        if(name.equals("xiaohong")) {
+            throw new Exception("trans error");
+        }
+
+        userRoleMapper.updateRole(2);
         return "success";
     }
 }

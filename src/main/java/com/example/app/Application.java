@@ -5,6 +5,7 @@ import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * @author qcl
@@ -12,6 +13,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
  * @date 2022/4/8 9:45 AM
  * @description
  */
+@EnableTransactionManagement
 @EnableConfigurationProperties({AppConfig.class})
 @SpringBootApplication
 public class Application {
