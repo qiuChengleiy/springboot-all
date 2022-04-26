@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "app",
+      "type": "com.example.app.config.AppConfig",
+      "sourceType": "com.example.app.config.AppConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "app.name",
+      "type": "java.lang.String",
+      "sourceType": "com.example.app.config.AppConfig"
+    },
+    {
+      "name": "app.version",
+      "type": "java.lang.String",
+      "sourceType": "com.example.app.config.AppConfig"
+    }
+  ],
+  "hints": []
+}

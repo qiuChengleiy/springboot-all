@@ -1,0 +1,33 @@
+server:
+  port: 8877 # 设置应用端口，默认是8080
+  tomcat:
+    max-threads: 800
+    uri-encoding: UTF-8
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: app
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: qcl123456
+  redis:
+    host: localhost # Redis服务器地址
+    database: 1 # Redis数据库索引（默认为0）
+    port: 6379 # Redis服务器连接端口
+    password: # Redis服务器连接密码（默认为空）
+
+mybatis:
+  mapper-locations:
+    - classpath:mapper/*.xml
+  configuration:
+    cache-enabled: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+app:
+  name: ${spring.application.name}
+  version: "1.0"
+
+
