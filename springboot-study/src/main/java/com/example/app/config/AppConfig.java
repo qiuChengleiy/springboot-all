@@ -8,7 +8,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @date 2022/4/8 10:34 AM
  * @description
  */
-@ConfigurationProperties(prefix="app")
+@ConfigurationProperties(prefix= "com/example/app")
 public class AppConfig {
 
     public String getName() {

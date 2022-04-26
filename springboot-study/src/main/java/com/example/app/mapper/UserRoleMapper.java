@@ -1,7 +1,6 @@
 package com.example.app.mapper;
 
 import com.example.app.model.UserRole;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 

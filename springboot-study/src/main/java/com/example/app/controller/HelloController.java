@@ -2,7 +2,6 @@ package com.example.app.controller;
 
 import com.example.app.config.AppConfig;
 import com.example.app.dto.Post;
-import com.example.app.service.HelloService;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,7 +34,7 @@ public class HelloController {
 
     @Autowired
     @Qualifier("Hello1ServiceImpl")
-    private HelloService HelloService;
+    private com.example.app.service.HelloService HelloService;
 
     @RequestMapping("/hello")
     public String hello(){
