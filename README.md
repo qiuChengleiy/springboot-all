@@ -40,6 +40,7 @@ springboot从入门到进阶源码 欢迎star ⭐️  [我的博客(阅读体验
 ## Shiro安全框架整合
 
 - [SpringBoot进阶之整合Shiro鉴权框架(一)](https://mp.weixin.qq.com/s/WNM0iYcUDEBYo22JBwcCmw)
+- [SpringBoot进阶之整合Shiro鉴权框架(二)](https://mp.weixin.qq.com/s/p2kM9ObkhMhsTlPYjvB1lQ)
 
 ## 公众号
 
