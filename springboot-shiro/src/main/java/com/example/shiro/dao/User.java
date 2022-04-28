@@ -15,4 +15,5 @@ public class User {
     public String password;
     public String role;
     public String state;
+    public String permission;
 }

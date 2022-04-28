@@ -27,6 +27,14 @@ public class UserMock {
         }
     }
 
+    public static String getPermission(String username) {
+        if(username.equals("admin")) {
+            return "p:admin";
+        }else {
+            return "P:user";
+        }
+    }
+
     public static User getUserByUsername(String username) {
         User user = new User();
         if(username.equals("admin")) {

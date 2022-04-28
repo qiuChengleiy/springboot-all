@@ -2,10 +2,15 @@ package com.example.shiro.config;
 
 import com.example.shiro.dao.User;
 import com.example.shiro.mock.UserMock;
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
+import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author qcl
@@ -14,14 +19,6 @@ import org.apache.shiro.subject.PrincipalCollection;
  * @description
  */
 public class CustomRealm extends AuthorizingRealm {
-
-    /**
-     * 获取用户角色和权限
-     */
-    @Override
-    protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principal) {
-        return null;
-    }
 
     /**
      * 登录认证
@@ -50,4 +47,29 @@ public class CustomRealm extends AuthorizingRealm {
         SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(user, password, getName());
         return info;
     }
+
+
+    /**
+     * 获取用户角色和权限
+     */
+    @Override
+    protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principal) {
+        User user = (User) SecurityUtils.getSubject().getPrincipal();
+        String userName = user.getUsername();
+        SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
+
+        // 获取用户角色
+        Set<String> roleSet = new HashSet<>();
+        String role = UserMock.getRole(userName);
+        roleSet.add(role);
+        simpleAuthorizationInfo.setRoles(roleSet);
+
+        // 获取用户权限
+        String permission = UserMock.getPermission(userName);
+        Set<String> permissionSet = new HashSet<String>();
+        permissionSet.add(permission);
+        simpleAuthorizationInfo.setStringPermissions(permissionSet);
+        return simpleAuthorizationInfo;
+    }
+
 }
