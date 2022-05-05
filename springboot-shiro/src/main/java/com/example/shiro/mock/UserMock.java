@@ -27,6 +27,14 @@ public class UserMock {
         }
     }
 
+    public static String getRoleById(String userId) {
+        if(userId.equals("1")) {
+            return "admin";
+        }else {
+            return "user";
+        }
+    }
+
     public static String getPermission(String username) {
         if(username.equals("admin")) {
             return "p:admin";
