@@ -1,0 +1,20 @@
+server:
+  port: 8888 # 设置应用端口，默认是8080
+  tomcat:
+    max-threads: 800
+    uri-encoding: UTF-8
+  servlet:
+    context-path: /prod-api
+
+spring:
+  application:
+    name: app-shiro
+  datasource:
+    url: jdbc:mysql://xxx.xxx.xxx.xxx:3306/test?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: xxx
+    password: xxxxxxx
+  redis:
+    host: xxxxx # Redis服务器地址
+    database: x # Redis数据库索引（默认为0）
+    port: 6379 # Redis服务器连接端口
+    password: xxxx # Redis服务器连接密码（默认为空）
