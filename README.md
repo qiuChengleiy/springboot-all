@@ -46,6 +46,9 @@ springboot从入门到进阶源码 欢迎star ⭐️  [我的博客(阅读体验
 - [SpringBoot进阶之整合Shiro鉴权框架(五)](https://mp.weixin.qq.com/s/GNPLxCZtvmfS1GxFmWhOCw)
 - [SpringBoot进阶之整合Shiro鉴权框架(六)](https://mp.weixin.qq.com/s/9WvPQbMasWVpQVcLMa6bkQ)
 
+## 服务部署
+
+- [SpringBoot进阶之服务部署)](https://mp.weixin.qq.com/s/FOTDTwNcVlW5yxSpwBf-aA)
 
 ## 公众号
 
