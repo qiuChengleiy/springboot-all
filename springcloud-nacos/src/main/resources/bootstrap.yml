@@ -1,0 +1,16 @@
+server:
+  port: 8003
+
+spring:
+  application:
+    name: app-nacos
+  cloud:
+    # nacos
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+        namespace: '2ef2186e-078c-4904-8643-ff5e90555456'
+        prefix: febs
+        group: g_nacos
+        refresh: false
