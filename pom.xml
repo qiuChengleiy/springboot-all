@@ -12,6 +12,8 @@
         <module>springboot-shiro</module>
         <module>springboot-study</module>
         <module>springcloud-nacos</module>
+        <module>springcloud-rest-producer</module>
+        <module>springcloud-rest-consumer</module>
     </modules>
 
     <properties>

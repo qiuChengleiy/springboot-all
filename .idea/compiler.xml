@@ -9,6 +9,8 @@
         <module name="springboot-study" />
         <module name="springcloud-nacos" />
         <module name="springboot-shiro" />
+        <module name="springcloud-rest-producer" />
+        <module name="springcloud-rest-consumer" />
       </profile>
     </annotationProcessing>
   </component>
@@ -18,6 +20,8 @@
       <module name="springboot-shiro" options="-parameters" />
       <module name="springboot-study" options="-parameters" />
       <module name="springcloud-nacos" options="-parameters" />
+      <module name="springcloud-rest-consumer" options="-parameters" />
+      <module name="springcloud-rest-producer" options="-parameters" />
     </option>
   </component>
 </project>
