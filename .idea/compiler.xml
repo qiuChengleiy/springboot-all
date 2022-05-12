@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springboot-study" />
+        <module name="springcloud-hystrix" />
         <module name="springcloud-nacos" />
         <module name="springboot-shiro" />
         <module name="springcloud-rest-producer" />
@@ -19,6 +20,7 @@
       <module name="springboot-all" options="-parameters" />
       <module name="springboot-shiro" options="-parameters" />
       <module name="springboot-study" options="-parameters" />
+      <module name="springcloud-hystrix" options="-parameters" />
       <module name="springcloud-nacos" options="-parameters" />
       <module name="springcloud-rest-consumer" options="-parameters" />
       <module name="springcloud-rest-producer" options="-parameters" />

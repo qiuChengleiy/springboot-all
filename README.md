@@ -55,6 +55,7 @@ springboot从入门到进阶源码 欢迎star ⭐️  [我的博客(阅读体验
 
 - [一起来学SpringCloud之微服务概述](https://mp.weixin.qq.com/s/lL0whlLJWj7gPoxLcD4eHA)
 - [一起来学SpringCloud之整合Nacos](https://mp.weixin.qq.com/s/pt4fsGlBczfQa6yh0-MbCA)
+- [一起来学SpringCloud之服务间调用](https://mp.weixin.qq.com/s/E0b2RCa45w5q8qCWS4wTzQ)
 
 ## 公众号
 
