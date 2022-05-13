@@ -6,12 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springboot-study" />
+        <module name="springcloud-ribbon" />
         <module name="springcloud-hystrix" />
         <module name="springcloud-nacos" />
-        <module name="springboot-shiro" />
         <module name="springcloud-rest-producer" />
         <module name="springcloud-rest-consumer" />
+        <module name="springboot-study" />
+        <module name="springboot-shiro" />
       </profile>
     </annotationProcessing>
   </component>
@@ -24,6 +25,7 @@
       <module name="springcloud-nacos" options="-parameters" />
       <module name="springcloud-rest-consumer" options="-parameters" />
       <module name="springcloud-rest-producer" options="-parameters" />
+      <module name="springcloud-ribbon" options="-parameters" />
     </option>
   </component>
 </project>

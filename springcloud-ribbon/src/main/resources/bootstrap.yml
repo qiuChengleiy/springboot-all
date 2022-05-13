@@ -1,0 +1,24 @@
+server:
+  port: 10005
+
+spring:
+  application:
+    name: ribbon
+  cloud:
+    # nacos
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+        namespace: '2ef2186e-078c-4904-8643-ff5e90555456'
+
+
+ribbon:
+  #  restclient:
+  #    enabled: true # 开启重试机制
+  #所有服务都使用随机策略
+  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+  ConnectTimeout: 2 # 超时时间(ms)
+  OkToRetryOnAllOperations: true # 所有请求在失败的时候都进行重试：
+  MaxAutoRetriesNextServer: 1 # 实例的重试次数：
+  listOfServers: localhost:18080 # 如果不和Eureka搭配使用的话，我们就需要手动指定服务清单给Ribbon：

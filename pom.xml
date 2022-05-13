@@ -15,6 +15,7 @@
         <module>springcloud-rest-producer</module>
         <module>springcloud-rest-consumer</module>
         <module>springcloud-hystrix</module>
+        <module>springcloud-ribbon</module>
     </modules>
 
     <properties>
