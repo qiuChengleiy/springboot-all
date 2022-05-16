@@ -12,6 +12,7 @@
         <module name="springcloud-rest-producer" />
         <module name="springcloud-rest-consumer" />
         <module name="springboot-study" />
+        <module name="springcloud-openfeign" />
         <module name="springboot-shiro" />
       </profile>
     </annotationProcessing>
@@ -23,6 +24,7 @@
       <module name="springboot-study" options="-parameters" />
       <module name="springcloud-hystrix" options="-parameters" />
       <module name="springcloud-nacos" options="-parameters" />
+      <module name="springcloud-openfeign" options="-parameters" />
       <module name="springcloud-rest-consumer" options="-parameters" />
       <module name="springcloud-rest-producer" options="-parameters" />
       <module name="springcloud-ribbon" options="-parameters" />

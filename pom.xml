@@ -16,6 +16,7 @@
         <module>springcloud-rest-consumer</module>
         <module>springcloud-hystrix</module>
         <module>springcloud-ribbon</module>
+        <module>springcloud-openfeign</module>
     </modules>
 
     <properties>
