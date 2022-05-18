@@ -17,6 +17,7 @@
         <module>springcloud-hystrix</module>
         <module>springcloud-ribbon</module>
         <module>springcloud-openfeign</module>
+        <module>springcloud-sentinel</module>
     </modules>
 
     <properties>
