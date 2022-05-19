@@ -1,0 +1,60 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: zuul
+  cloud:
+    # nacos
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+
+
+
+#zuul:
+#  routes:
+#    # 访问 http://localhost:8003/hello/app/1 转发-> http://localhost:18080/hello/app/1
+#    hello:
+#      path: /**
+#      #url: http://localhost:18080
+#
+#      # 加入注册中心后不需要url了 直接使用serviceID
+#      serviceId: provider
+
+
+# 引入注册中心 还可以简化为
+zuul:
+  # 关闭某个过滤器    具体过滤器解释: https://mrbird.cc/Spring-Cloud-Zuul-Router.html
+  #  SendResponseFilter:
+  #    post:
+  #      disable: true
+
+  # 敏感请求头过滤 如果想关闭默认配置可以置为空 sensitive-headers:
+  sensitive-headers: Cookie,Set-Cookie,Authorization
+
+  # 路由重定向问题
+  add-host-header: true
+
+  # 添加前缀
+  prefix: /gateway # http://localhost:8003/gateway/provider/hello/app/1 ->  http://localhost:18080/hello/app/1
+
+  # 关闭默认配置
+  ignored-services: provider # 再次访问  http://localhost:8003/provider/hello/app/1 -> 404 会使前缀失效
+  routes:
+    # 以服务名称作为请求前缀 http://localhost:8003/provider/hello/app/1 ->  http://localhost:18080/hello/app/1
+    provider:
+      path: /**
+      # 进行本地跳转 不会转发到 provider 服务  http://localhost:8003/gateway/ -> http://localhost:8003/hello/app
+      #url: forward:/hello/app
+
+      # 关闭某个路由下的头过滤
+      sensitive-headers:
+
+
+      # 默认的serviceId: provider
+
+    # 相同路径下 优先级取决于谁在前  所以会先访问 provider下的, 如果服务不存在会报错
+#    consumer:
+#      path: /**

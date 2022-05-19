@@ -18,6 +18,7 @@
         <module>springcloud-ribbon</module>
         <module>springcloud-openfeign</module>
         <module>springcloud-sentinel</module>
+        <module>springcloud-zuul</module>
     </modules>
 
     <properties>
