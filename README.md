@@ -60,6 +60,7 @@ springboot从入门到进阶源码 欢迎star ⭐️  [我的博客(阅读体验
 - [一起来学SpringCloud之整合Ribbon](https://mp.weixin.qq.com/s/TR0cgd-qPGLUhX-m13xHhg)
 - [一起来学SpringCloud之整合Open Feign实现远程调用](https://mp.weixin.qq.com/s/RGo5_kDxAANWog3vWe8lbg)
 - [一起来学SpringCloud之整合Alibaba Sentinel](https://mp.weixin.qq.com/s/Ph-I2C3ukXa1GbehhsNf2A)
+- [一起来学SpringCloud之整合Zuul网关服务(一)](https://mp.weixin.qq.com/s/4JdUhEJytR4812Rrr4x38g)
 
 ## 公众号
 
