@@ -19,6 +19,7 @@
         <module>springcloud-openfeign</module>
         <module>springcloud-sentinel</module>
         <module>springcloud-zuul</module>
+        <module>springcloud-jaeger</module>
     </modules>
 
     <properties>

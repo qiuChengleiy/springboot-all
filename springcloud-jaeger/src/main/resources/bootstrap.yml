@@ -1,0 +1,25 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: jaeger
+  cloud:
+    # nacos
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+
+# jaeger ui: localhost:16681/search
+opentracing:
+  jaeger:
+    enabled: true
+    log-spans: true
+    const-sampler:
+      decision: true
+    udp-sender:
+      host: localhost
+      port: 6831
+
+

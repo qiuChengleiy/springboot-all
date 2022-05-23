@@ -16,6 +16,7 @@
         <module name="springcloud-openfeign" />
         <module name="springboot-shiro" />
         <module name="springcloud-zuul" />
+        <module name="springcloud-jaeger" />
       </profile>
     </annotationProcessing>
   </component>
@@ -25,6 +26,7 @@
       <module name="springboot-shiro" options="-parameters" />
       <module name="springboot-study" options="-parameters" />
       <module name="springcloud-hystrix" options="-parameters" />
+      <module name="springcloud-jaeger" options="-parameters" />
       <module name="springcloud-nacos" options="-parameters" />
       <module name="springcloud-openfeign" options="-parameters" />
       <module name="springcloud-rest-consumer" options="-parameters" />
