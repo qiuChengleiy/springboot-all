@@ -62,6 +62,7 @@ springboot从入门到进阶源码 欢迎star ⭐️  [我的博客(阅读体验
 - [一起来学SpringCloud之整合Alibaba Sentinel](https://mp.weixin.qq.com/s/Ph-I2C3ukXa1GbehhsNf2A)
 - [一起来学SpringCloud之整合Zuul网关服务(一)](https://mp.weixin.qq.com/s/4JdUhEJytR4812Rrr4x38g)
 - [一起来学SpringCloud之整合Zuul网关服务(二)](https://mp.weixin.qq.com/s/yEHAGFDgv3tR7ZrbGYPA3Q)
+- [一起来学SpringCloud之整合Jaeger链路追踪](https://mp.weixin.qq.com/s/au2e3uXoCRAlEHHnoop2Cw)
 
 ## 公众号
 
