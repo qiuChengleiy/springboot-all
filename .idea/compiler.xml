@@ -2,21 +2,22 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springcloud-ribbon" />
         <module name="springcloud-sentinel" />
-        <module name="springcloud-hystrix" />
         <module name="springcloud-nacos" />
-        <module name="springcloud-rest-producer" />
-        <module name="springcloud-rest-consumer" />
-        <module name="springboot-study" />
-        <module name="springcloud-openfeign" />
         <module name="springboot-shiro" />
+        <module name="springcloud-ribbon" />
         <module name="springcloud-zuul" />
+        <module name="springboot-study" />
+        <module name="springcloud-rest-consumer" />
         <module name="springcloud-jaeger" />
+        <module name="springcloud-hystrix" />
+        <module name="springcloud-openfeign" />
+        <module name="springcloud-rest-producer" />
       </profile>
     </annotationProcessing>
   </component>
