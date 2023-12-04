@@ -21,3 +21,6 @@ bin-release/
 
 */target/**
 /.idea/
+
+/target/
+/logs/

@@ -7,23 +7,27 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springcloud-sentinel" />
-        <module name="springcloud-nacos" />
-        <module name="springboot-shiro" />
-        <module name="springcloud-ribbon" />
-        <module name="springcloud-zuul" />
-        <module name="springboot-study" />
-        <module name="springcloud-rest-consumer" />
-        <module name="springcloud-jaeger" />
-        <module name="springcloud-hystrix" />
-        <module name="springcloud-openfeign" />
-        <module name="springcloud-rest-producer" />
+        <module name="springboot-mybatis-plus" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="springboot-shiro" target="8" />
+      <module name="springboot-study" target="8" />
+      <module name="springcloud-hystrix" target="8" />
+      <module name="springcloud-jaeger" target="8" />
+      <module name="springcloud-nacos" target="8" />
+      <module name="springcloud-openfeign" target="8" />
+      <module name="springcloud-rest-consumer" target="8" />
+      <module name="springcloud-rest-producer" target="8" />
+      <module name="springcloud-ribbon" target="8" />
+      <module name="springcloud-sentinel" target="8" />
+      <module name="springcloud-zuul" target="8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="springboot-all" options="-parameters" />
+      <module name="springboot-mybatis-plus" options="-parameters" />
       <module name="springboot-shiro" options="-parameters" />
       <module name="springboot-study" options="-parameters" />
       <module name="springcloud-hystrix" options="-parameters" />
