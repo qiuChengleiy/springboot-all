@@ -1,5 +1,8 @@
 package com.springboot.all.mybatisplus.test;
 
+import cn.hutool.json.JSONObject;
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.springboot.all.mybatisplus.MyBatisPlusApp;
 import com.springboot.all.mybatisplus.mapper.UserMapper;
 import com.springboot.all.mybatisplus.model.User;
@@ -9,6 +12,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 
 import java.util.List;
@@ -34,19 +38,47 @@ public class UserTest {
     }
 
     @Test
+    public void selectByName() {
+        // select all
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.like("name", "x%");
+        List<User> userList = userMapper.selectList(queryWrapper);
+        userList.forEach(System.out::println);
+        //User(id=1731552348403740673, name=xiaohong2, age=22)
+        //User(id=1731552348403740674, name=xiaohong3, age=23)
+        //User(id=1731552348470849537, name=xiaohong4, age=24)
+        //User(id=1731552348470849538, name=xiaohong5, age=25)
+        //User(id=1731552348470849539, name=xiaohong6, age=26)
+    }
+
+    @Test
+    public void selectByConditionName() {
+        // select all
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>(User.builder().name("x").build());
+        List<User> userList = userMapper.selectList(queryWrapper);
+        userList.forEach(System.out::println);
+        //User(id=1731552348403740673, name=xiaohong2, age=22)
+        //User(id=1731552348403740674, name=xiaohong3, age=23)
+        //User(id=1731552348470849537, name=xiaohong4, age=24)
+        //User(id=1731552348470849538, name=xiaohong5, age=25)
+        //User(id=1731552348470849539, name=xiaohong6, age=26)
+    }
+
+    @Test
     public void insertTest() {
         // insert
-        userMapper.insert(User.builder().name("xiaohong1").age(21).build());
-        userMapper.insert(User.builder().name("xiaohong2").age(22).build());
-        userMapper.insert(User.builder().name("xiaohong3").age(23).build());
-        userMapper.insert(User.builder().name("xiaohong4").age(24).build());
-        userMapper.insert(User.builder().name("xiaohong5").age(25).build());
+//        userMapper.insert(User.builder().name("xiaohong1").age(21).build());
+//        userMapper.insert(User.builder().name("xiaohong2").age(22).build());
+//        userMapper.insert(User.builder().name("xiaohong3").age(23).build());
+//        userMapper.insert(User.builder().name("xiaohong4").age(24).build());
+//        userMapper.insert(User.builder().name("xiaohong5").age(25).build());
+        userMapper.insert(User.builder().name("xiaohong6").age(26).build());
     }
 
     @Test
     public void updateTest() {
-        // update
-        userMapper.updateById(User.builder().id(1731552348286300161L).name("xiaohong1-update").build());
+        userMapper.updateById(User.builder().id(1731552348470849539L).name("hhhhh").version(1).build());
+        userMapper.updateById(User.builder().id(1731552348470849539L).name("hhhhh").version(1).build());
     }
 
     @Test
