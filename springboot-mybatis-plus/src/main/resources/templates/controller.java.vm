@@ -1,0 +1,26 @@
+package ${packageName}.controller;
+
+import ${packageName}.entity.${upperClassName};
+import ${packageName}.service.${upperClassName}Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+
+@RestController
+@RequestMapping("/${lowerClassName}")
+public class ${upperClassName}Controller {
+
+    @Autowired
+    private ${upperClassName}Service ${lowerClassName}Service;
+
+    @GetMapping("/all")
+    @ResponseBody
+    public List<${upperClassName}> get${upperClassName}List() {
+        return ${lowerClassName}Service.get${upperClassName}Info();
+    }
+}
