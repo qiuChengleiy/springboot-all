@@ -21,6 +21,7 @@ public class UserController {
     @GetMapping("/all")
     @ResponseBody
     public List<User> getUserList() {
-        return userService.getUserInfo();
+      //  return userService.getUserInfo();
+        return null;
     }
 }
