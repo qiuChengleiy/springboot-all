@@ -7,6 +7,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Date;
 
+import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,7 +21,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class User implements Serializable {
+public class User extends Model<User> implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

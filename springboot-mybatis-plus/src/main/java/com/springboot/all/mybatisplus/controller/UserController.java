@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.springboot.all.mybatisplus.entity.User;
+import com.springboot.all.mybatisplus.mapper.UserMapper;
 import com.springboot.all.mybatisplus.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,6 +28,9 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private UserMapper userMapper;
+
     @GetMapping("/all")
     @ResponseBody
     public List<User> getUserList() {
@@ -37,25 +41,32 @@ public class UserController {
     @GetMapping("/save")
     @ResponseBody
     public void saveUser() {
+//        User user = new User();
+//        user.setName("小明");
+//        user.setAge(18);
+//        user.setVersion(1);
+//        userService.save(user);
+
+//        User user1 = new User();
+//        user1.setName("小明1");
+//        user1.setAge(20);
+//        user1.setVersion(1);
+//
+//        User user2 = new User();
+//        user2.setName("小明2");
+//        user2.setAge(21);
+//        user2.setVersion(1);
+//        List<User> userList = new ArrayList<>();
+//        userList.add(user1);
+//        userList.add(user2);
+//        userService.saveBatch(userList);
+
+
         User user = new User();
         user.setName("小明");
         user.setAge(18);
         user.setVersion(1);
-        userService.save(user);
-
-        User user1 = new User();
-        user1.setName("小明1");
-        user1.setAge(20);
-        user1.setVersion(1);
-
-        User user2 = new User();
-        user2.setName("小明2");
-        user2.setAge(21);
-        user2.setVersion(1);
-        List<User> userList = new ArrayList<>();
-        userList.add(user1);
-        userList.add(user2);
-        userService.saveBatch(userList);
+        userMapper.insert(user);
     }
 
     @GetMapping("/update")
@@ -72,6 +83,7 @@ public class UserController {
         user1.setName("小明1-UPDATE");
         userService.update(user1, updateWrapper);
 
+        userMapper.update(updateWrapper);
     }
 
     @GetMapping("/saveOrUpdate")
@@ -104,6 +116,8 @@ public class UserController {
         Map<String, Object> map = new HashMap<>();
         map.put("name", "小明2");
         userService.removeByMap(map);
+
+        userMapper.delete(queryWrapper);
     }
 
     @GetMapping("/page")
@@ -129,5 +143,28 @@ public class UserController {
         json.put("current", current);
         json.put("list", list);
         return json;
+    }
+
+    @GetMapping("/activeRecord")
+    @ResponseBody
+    public void activeRecord() {
+        User user = new User();
+        user.setName("小明");
+        user.setAge(18);
+        user.setVersion(1);
+        user.insert();
+
+        List<User> list = user.selectAll();
+
+        User user1 = new User();
+        user1.setId(1731552348470849545L);
+        user1.setName("小明hhh");
+        user1.setAge(18);
+        user1.setVersion(1);
+        user1.updateById();
+
+        user1.deleteById();
+        user1.deleteById(1731552348470849545L);
+
     }
 }

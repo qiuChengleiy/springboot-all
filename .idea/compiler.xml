@@ -26,7 +26,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="springboot-all" options="-parameters" />
+      <module name="springboot-all" options="" />
       <module name="springboot-mybatis-plus" options="-parameters" />
       <module name="springboot-shiro" options="-parameters" />
       <module name="springboot-study" options="-parameters" />
