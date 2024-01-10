@@ -167,4 +167,19 @@ public class UserController {
         user1.deleteById(1731552348470849545L);
 
     }
+
+    @GetMapping("/allEq")
+    @ResponseBody
+    public void allEq() {
+        Map<String, Object> params = new HashMap<>();
+        params.put("name", "小明");
+        params.put("age", null);
+
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+        queryWrapper.allEq(params, false);
+        queryWrapper.eq("name", "小明");
+
+        userMapper.selectList(queryWrapper);
+
+    }
 }
