@@ -4,8 +4,6 @@
 
 springboot从入门到进阶源码 欢迎star ⭐️  [我的博客(阅读体验较佳)](https://www.qiuchenglei.top)
 
-## 配套文章
-
 ### 基础部分
 
 - [Springboot入门](https://mp.weixin.qq.com/s/FFgVhS5p6GdgTXlCsbgY6g)
@@ -233,6 +231,16 @@ springboot从入门到进阶源码 欢迎star ⭐️  [我的博客(阅读体验
 - [面试官: Phaser有了解过吗？说说看](https://mp.weixin.qq.com/s/rAAc1UH-iP6ox4LpmBJvEQ)
 - [面试官: Fork/Join 有了解过吗？说说看（含源码分析）](https://mp.weixin.qq.com/s/YESb3PH12jHAn8HSs_yQ9g)
 - [面试官: Stream并行流有了解过吗？说说看](https://mp.weixin.qq.com/s/Nmexsl9RrHZudRBrU0b1FA)
+
+## Mybatis Plus
+
+- [一起来学Mybatis Plus(一)](https://mp.weixin.qq.com/s/3vT6H0XHrJv3RJ8oJNhAIg)
+- [一起来学Mybatis Plus(二) & 内置注解](https://mp.weixin.qq.com/s/8ovZuZIFyszrUzZhVc7m1w)
+- [一起来学Mybatis Plus(三) & 代码生成器](https://mp.weixin.qq.com/s/OlcmQbNeQKRmC7KN8ekj3A)
+- [一起来学Mybatis Plus(四) & Service CRUD接口](https://mp.weixin.qq.com/s/y5fNOaJtC9X5KuIcBtOfOg)
+- [一起来学Mybatis Plus(五) & Mapper CRUD接口](https://mp.weixin.qq.com/s/mjalFZ8K5xclF5XVMP7D3A)
+- [一起来学Mybatis Plus(六) & 条件构造器](https://mp.weixin.qq.com/s/FOGRmtl280K-LUcruPu1hQ)
+- [一起来学Mybatis Plus(七) & 主键策略](https://mp.weixin.qq.com/s/cGU13x6QaeY-jFvzQo6Pkw)
 
 
 ## 公众号

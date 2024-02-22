@@ -13,9 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.sql.SQLException;
-import java.sql.Wrapper;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -34,8 +31,10 @@ public class UserController {
     @GetMapping("/all")
     @ResponseBody
     public List<User> getUserList() {
-      //  return userService.getUserInfo();
-        return null;
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.like("name", "x");
+        List<User> userList = userMapper.selectList(queryWrapper);
+        return userList;
     }
 
     @GetMapping("/save")
